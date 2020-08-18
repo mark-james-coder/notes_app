@@ -5,13 +5,13 @@ function testNoteHasAText() {
   assert.isTrue(note.text === 'first note');
 };
 
-function testNoteHasAText2() {
-  var note = new Note("second note");
-  assert.isTrue(note.text === 'second note');
+function testReturnsNoteText() {
+  var note = new Note("third note");
+  assert.isTrue(note.get_text() === 'third note');
 };
 
   testNoteHasAText();
-  testNoteHasAText2();
+  testReturnsNoteText();
 
 
 // function testNoteHasAText() {
