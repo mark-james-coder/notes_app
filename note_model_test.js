@@ -1,18 +1,14 @@
 console.log("inside note model test");
 
 function testNoteHasAText() {
-  var note = new Note();
-  assert.isTrue(note.text !== 'first note');
+  var note = new Note("first note");
+  assert.isTrue(note.text === 'first note');
 };
 
-testNoteHasAText();
-  function testNoteHasAText2() {
-    var note = new Note("second note");
-
-    if (note.text !== "second note") {
-      throw new Error("text is not 'second note'");
-    }
-  };
+function testNoteHasAText2() {
+  var note = new Note("second note");
+  assert.isTrue(note.text === 'second note');
+};
 
   testNoteHasAText();
   testNoteHasAText2();
