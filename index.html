@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
+    <title>Notes App</title>
     <script src="note_model.js"></script>
     <script src="note_list_model.js"></script>
     <script src="note_list_view.js"></script>
@@ -9,6 +12,17 @@
     <script src="note_list_view_test.js"></script>
   </head>
   <body>
-
+    <h1>Notes</h1>
+    <form id="text" action="/#new_note" method="post">
+      <textarea name="note" row="5" cols="30"></textarea></textarea>
+      <input type='submit' value='Submit'>
+    </form><br>
+    <div id="app">
+      hello
+    </div>
+      <script src="note_controller.js"></script>
+      <script src="note_controller_test.js"></script>
+      <script src="single_note_view.js"></script>
+      <script src="single_note_view_test.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@ console.log("inside note list model.js");
   function Note_list() {
     this.notes = []
   };
-  Note_list.prototype.create_note = function(text) {
+  Note_list.prototype.add_note = function(text) {
     var note = new Note(text);
     this.notes.push(note)
   }

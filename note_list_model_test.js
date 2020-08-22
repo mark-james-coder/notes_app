@@ -2,20 +2,20 @@ console.log("inside note list model test");
 
 function testStoresAnArrayOfNoteModels() {
   var note_list = new Note_list();
-  assert.isTrue(Array.isArray(note_list.notes));
+  assert.isTrue(Array.isArray(note_list.notes), 'testStoresAnArrayOfNoteModels');
 };
 
 function testStoresNote() {
   var note_list = new Note_list();
-  note_list.create_note("Test note1")
-  assert.isTrue(note_list.notes.length === 1);
-  assert.isTrue(note_list.get_notes()[0].get_text() === "Test note1")
+  note_list.add_note("Test note1")
+  assert.isTrue(note_list.notes.length === 1, 'testStoresNote');
+  assert.isTrue(note_list.get_notes()[0].get_text() === "Test note1", 'testStoresNote')
 };
 
 function testReturnNotes() {
   var note_list = new Note_list();
-  note_list.create_note("Test note2")
-  assert.isTrue(note_list.get_notes()[0].get_text() === "Test note2")
+  note_list.add_note("Test note2")
+  assert.isTrue(note_list.get_notes()[0].get_text() === "Test note2", 'testStoresNote')
 }
 
 testStoresAnArrayOfNoteModels();
